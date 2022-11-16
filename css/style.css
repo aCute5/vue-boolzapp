@@ -94,3 +94,6 @@ body{
     width: 20%;
     border-radius: 50%;
 }
+.body-chat li{
+    list-style-type: none;
+}

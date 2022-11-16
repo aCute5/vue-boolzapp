@@ -43,12 +43,12 @@
             </div>
             <div class="chat-sidebar">
                 <ul class="list-chat">
-                    <li v-for= "(contact,i) in contacts" class="singlechat">
+                    <li v-for= "(contact,index) in contacts" class="singlechat">
                     <img :src= "'img/' + contact.avatar" alt="Michele">
                     <h3>{{contact.name}}</h3>
                     <ul  class="body-chat">
-                      <li v-for="(data,i) in contact.messages">
-                        {{data.message}}
+                      <li v-for="(data,i) in 1">
+                        {{contacts[index].messages[1].message}}
                       </li>
                     </ul>       
                     </li>
