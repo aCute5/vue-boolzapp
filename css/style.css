@@ -25,7 +25,7 @@ body{
 
 .container .sidebar{
     width: 40%;
-    background-color: #3535EC;
+    background-color: white;
     height: 100%;
 }
 .sidebar .account{
@@ -68,6 +68,29 @@ body{
     border: .5px solid rgb(164, 146, 146);
 }
 ::placeholder{
-    
     text-align: center;
+}
+.chat-sidebar{
+    height: 80%;
+}
+.list-chat{
+    list-style-type: none;
+    flex-wrap: nowrap;
+    overflow: auto;
+    height:100%;
+}
+.singlechat{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    
+}
+.singlechat:hover{
+    background-color: #ece5dd;
+}
+.list-chat img{
+    width: 20%;
+    border-radius: 50%;
 }
