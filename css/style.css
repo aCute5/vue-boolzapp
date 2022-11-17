@@ -113,3 +113,9 @@ body{
     background-color:#ece5dd; ;
 
 }
+.singlechat.hidden{
+    display: none;
+}
+/* .list-chat .singlechat li .active{
+    display: visible;
+} */

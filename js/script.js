@@ -163,10 +163,24 @@ const app = new Vue(
                 ],
                 }
                 ],
-           
+           index:0,
+           input:0,
+           searchInput:"",
         },
-        nethods:{
-            
-
+        methods:{
+            //funzione per selezionare la chat rispettiva alla list chat al @click
+            chatSelect(indiceChat){
+                this.index = indiceChat;
+            },
+            searchChat() {
+                this.contacts.forEach((chat,i) => {
+                  if (this.contacts[i].name.toLowerCase().includes(this.searchInput.toLowerCase())){
+                      this.contacts[i].visible = true;
+                  } else {
+                    this.contacts[i].visible = false;
+                  }
+                });
+              },
+          
         }
 })

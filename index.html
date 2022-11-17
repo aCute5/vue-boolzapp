@@ -39,11 +39,11 @@
                 </div>
             </div>
             <div class="chat-search">
-                <input type="text" placeholder=" &#128269 Cerca o inizia una nuova chat"class="chat-src">
+                <input type="text" v-model="searchInput" @keyup="searchChat" placeholder=" &#128269 Cerca o inizia una nuova chat"class="chat-src">
             </div>
             <div class="chat-sidebar">
                 <ul class="list-chat">
-                    <li v-for= "(contact,index) in contacts" class="singlechat" @click="">
+                    <li v-for= "(contact,index) in contacts" class="singlechat" :class="contact.visible == false  ?  'hidden': '' " @click="chatSelect(index)">
                     <img :src= "'img/' + contact.avatar" alt="Michele">
                     <h3>{{contact.name}}</h3>
                     <ul  class="body-chat">
@@ -58,6 +58,7 @@
         </div>
         <div class="chatlive">
             <div class="user-live">
+                <img :src="'img/' + contacts[index].avatar">
                 <h4></h4>
             </div>
             <div class="chatlive">
