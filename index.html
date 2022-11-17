@@ -58,25 +58,34 @@
         </div>
         <div class="chatlive">
             <div class="user-live">
-                <img :src="'img/' + contacts[index].avatar">
-                <h4>{{contacts[index].name}}</h4>
+                <div class="user-info">
+                    <img :src="'img/' + contacts[index].avatar" alt="contacts.[index].name">
+                    <h4>{{contacts[index].name}}</h4>
+                </div>
+                <div class="user-btn-live">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
                 <div class="status"></div>
             </div>
             <div class="chatbody">
                 <ul class="current-chat" >
-                    <li v-for="(msg,index) in contacts.messages">
-                        {{contacts.messages.msg[index].message}}
-                    </li>
-                    <li>
-                      
-                    </li>
-                    <li>
-                        
+                    <li v-for="msg in contacts[index].messages" :class="msg.status">
+                        {{msg.message}}
                     </li>
                 </ul>
             </div>
             <div class="input-chat">
-                
+            <i class="far fa-smile"></i>
+                <input 
+                class="inputmessage"
+                type="text"
+                placeholder="Scrivi qui"
+                v-model="newMsg"
+                @keyup.enter="addMsg(index)"
+                >
+                <i class="fas fa-microphone"></i>
             </div>
         </div>
 

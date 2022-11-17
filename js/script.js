@@ -166,6 +166,8 @@ const app = new Vue(
            index:0,
            input:0,
            searchInput:"",
+           newMsg:"",
+           
         },
         methods:{
             //funzione per selezionare la chat rispettiva alla list chat al @click
@@ -181,6 +183,16 @@ const app = new Vue(
                   }
                 });
               },
+            addMsg(index){
+                if (this.newMsg.trim() !== '') {
+                    this.contacts[index].messages.push({
+                        message: this.newMsg,
+                        status: 'sent',
+                    });
+                    this.newMsg = '';
+                }
+                setTimeout (() => { this.contacts[index].messages.push({message: "ciao", status: "received",}); },2000);                                           
+                }
           
         }
 })
