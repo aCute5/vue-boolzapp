@@ -59,10 +59,21 @@
         <div class="chatlive">
             <div class="user-live">
                 <img :src="'img/' + contacts[index].avatar">
-                <h4></h4>
+                <h4>{{contacts[index].name}}</h4>
+                <div class="status"></div>
             </div>
-            <div class="chatlive">
-
+            <div class="chatbody">
+                <ul class="current-chat" >
+                    <li v-for="(msg,index) in contacts.messages">
+                        {{contacts.messages.msg[index].message}}
+                    </li>
+                    <li>
+                      
+                    </li>
+                    <li>
+                        
+                    </li>
+                </ul>
             </div>
             <div class="input-chat">
                 

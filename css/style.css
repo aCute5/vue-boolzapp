@@ -103,19 +103,36 @@ body{
 .body-chat li{
     list-style-type: none;
 }
+.singlechat.hidden{
+    display: none;
+}
 /* LIVE CHAT RIGHT */
 
 .chatlive{
     width: 60%;
     background-color: salmon;
+    
 }
 .chatlive .user-live{
     background-color:#ece5dd; ;
 
 }
-.singlechat.hidden{
-    display: none;
+.chatlive .user-live{
+    background-color: #ece5dd;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    gap: 1rem;
 }
-/* .list-chat .singlechat li .active{
-    display: visible;
-} */
+.chatlive .user-live img{
+    border-radius: 50%;
+    width: 10%;
+}
+.chatlive .chatbody{
+    height: 80%;
+    background-image: url(../img/mine.jpg);
+}
+.chatbody .current-chat{
+    display: flex;
+    flex-wrap: wrap;
+}
