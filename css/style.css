@@ -19,6 +19,8 @@ body{
     width: 80%;
     min-width: 900px;
     background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
 
 }
 /* SIDEBAR OF THE CHATS AND USER BAR */
@@ -85,7 +87,11 @@ body{
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    border: 0.2px solid rgb(220, 204, 204);
     
+}
+.singlechat .status{
+    font-size: smaller;
 }
 .singlechat:hover{
     background-color: #ece5dd;
@@ -96,4 +102,14 @@ body{
 }
 .body-chat li{
     list-style-type: none;
+}
+/* LIVE CHAT RIGHT */
+
+.chatlive{
+    width: 60%;
+    background-color: salmon;
+}
+.chatlive .user-live{
+    background-color:#ece5dd; ;
+
 }

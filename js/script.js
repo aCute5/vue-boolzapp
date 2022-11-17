@@ -2,6 +2,7 @@ const app = new Vue(
     {
         el:"#root",
         data:{
+           
             contacts: [
                 {
                 name: 'Michele',
@@ -161,6 +162,11 @@ const app = new Vue(
                 }
                 ],
                 }
-                ]
+                ],
+           
+        },
+        nethods:{
+            
+
         }
 })
