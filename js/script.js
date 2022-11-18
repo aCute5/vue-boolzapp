@@ -186,13 +186,15 @@ const app = new Vue(
             addMsg(index){
                 if (this.newMsg.trim() !== '') {
                     this.contacts[index].messages.push({
+                       // date: new Date().toISOString().replaceAll('-','/').replaceAll("T","").split('.')[0],
+                        date:luxon.DateTime.now().toFormat('MM-dd-yyyy-HH:mm'),
                         message: this.newMsg,
                         status: 'sent',
                     });
                     this.newMsg = '';
                 }
-                setTimeout (() => { this.contacts[index].messages.push({message: "ciao", status: "received",}); },2000);                                           
-                }
-          
-        }
+                setTimeout (() => { this.contacts[index].messages.push({message: "ciao", status: "received",date:luxon.DateTime.now().toFormat('MM-dd-yyyy-HH:mm'),}); },2000);                                           
+             },
+            
+         }
 })
