@@ -172,6 +172,7 @@ body{
 .current-chat li:hover #icon-dropdown{
     display: inline;
 }
+
 .current-chat .dropdown-menu{
     display: none;
     background-color: white;
@@ -184,6 +185,7 @@ body{
     box-shadow:  0 0 5px grey;
     margin-top: .3rem;
 }
+
 
 .chatbody .current-chat .sent{
     background-color: #10E174;
