@@ -74,13 +74,17 @@
             </div>
             <div class="chatbody">
                 <ul class="current-chat" >
-                    <li v-for="msg in contacts[index].messages" :class="msg.status">
+                    <li v-for="(msg,indexmsg) in contacts[index].messages"  :class= " msg.delete ? 'hidden' : ''">
                         {{msg.message}}
+                        {{msg.dropdown}}
                         <span class="date">{{msg.date}}</span>
-                        <i id="icon-dropdown" class="fa-solid fa-chevron-down"></i>
-                        <div class="dropdown-menu">
+                        <div>
+                            <i id="icon-dropdown"    :class = "msg.dropdown  ? 'hidden' : ''" @click="openDropdown(indexmsg)" class="fa-solid fa-chevron-down"></i>
+                            <i id="icon-dropdown2"  :class = "msg.dropdown  ? 'active' : 'hidden'" @click="closeDropdown(indexmsg)" class="fa-solid fa-chevron-up"></i>
+                        </div>
+                        <div class="dropdown-menu"  :class = "msg.dropdown  ? 'active' : ''">
                             <span class="infomessage"> Info messaggio</span>
-                            <span class="delete message">Cancella messaggio</span>
+                            <span class="delete message" @click="deleteMsg(indexmsg)" >Cancella messaggio</span>
                         </div>
                     </li>
                 </ul>
