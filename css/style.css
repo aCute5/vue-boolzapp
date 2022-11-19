@@ -189,6 +189,9 @@ body{
     box-shadow:  0 0 5px grey;
     margin-top: .3rem;
 }
+.current-chat .dropdown-menu:hover{
+    cursor: pointer;
+}
 .current-chat .dropdown-menu.active{
     display: block;
 }

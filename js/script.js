@@ -240,7 +240,7 @@ const app = new Vue(
                 }
                 setTimeout (() => { this.contacts[index].messages.push({message: "ciao", status: "received",dropdown: false,
                 delete: false,date:luxon.DateTime.now().toFormat('MM-dd-yyyy-HH:mm'),}); },2000);                                           
-             },
+             }, // *important questo doppio metodo serve per arpire e chiudere la freccia; entra in conflitto con l'hover quindi nel CSS l'ho temporanamente tolto / *TODO: RISOLVERE IL CONFLITTO HOVER al passaggio del mouse 
              openDropdown(indexMessage){
                  this.contacts[this.index].messages[indexMessage].dropdown = true;
              },
@@ -248,7 +248,7 @@ const app = new Vue(
                 this.contacts[this.index].messages[indexMessage].dropdown = false;
 
              },
-            deleteMsg(indexDelete){
+            deleteMsg(indexDelete){ //function per rendere true il delete cosi al click di questa function cambia la classe del messaggio iterato che diventa fault
                 this.contacts[this.index].messages[indexDelete].delete = true; 
             }
          }
