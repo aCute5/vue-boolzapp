@@ -74,7 +74,7 @@
             </div>
             <div class="chatbody">
                 <ul class="current-chat" >
-                    <li v-for="(msg,indexmsg) in contacts[index].messages"  :class= " msg.delete ? 'hidden' : ''">
+                    <li v-for="(msg,indexmsg) in contacts[index].messages"  :class= "msg.delete ? 'hidden' : msg.status">
                         {{msg.message}}
                         {{msg.dropdown}}
                         <span class="date">{{msg.date}}</span>
