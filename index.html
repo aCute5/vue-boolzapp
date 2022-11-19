@@ -76,7 +76,7 @@
                 <ul class="current-chat" >
                     <li v-for="(msg,indexmsg) in contacts[index].messages"  :class= "msg.delete ? 'hidden' : msg.status">
                         {{msg.message}}
-                        {{msg.dropdown}}
+                        
                         <span class="date">{{msg.date}}</span>
                         <div>
                             <i id="icon-dropdown"    :class = "msg.dropdown  ? 'hidden' : ''" @click="openDropdown(indexmsg)" class="fa-solid fa-chevron-down"></i>
